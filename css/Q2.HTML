@@ -1,0 +1,173 @@
+<!-- Task: Create a profile card layout using the box model. The profile card
+shouldinclude:
+• A profile picture.
+• The user’s name and bio.
+• A button to "Follow" the user.
+Additional Requirements:
+• Add padding and borders to the elements.
+• Ensure the layout is clean and centered on the page using CSS margins.
+• Use the box-sizingproperty to demonstrate both content-boxand border-boxon
+different elements. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TASK 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ddd;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Profile Card Styles */
+        .profile-card {
+            width: 450px;
+            height: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 3px solid #000;
+            border-radius: 20px;
+            box-shadow: 2px 2px 18px rgba(14, 186, 148, 0.1);
+        }
+
+        /* Profile Picture Styles */
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            overflow: hidden;
+            box-sizing: content-box;
+        }
+
+        .profile-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Profile Info Styles */
+        .profile-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .name {
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .bio {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Follow Button Styles */
+        .follow-button {
+            width: 50%;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+            margin: 15px;
+            box-sizing: border-box;
+        }
+
+        .follow-button:hover {
+            background-color: #3e8e41;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            width: 100%;
+            padding: 0px;
+        }
+
+        .icon {
+            text-align: center;
+            cursor: pointer;
+            margin: 1.5rem;
+            transition: 0.5s ease;
+        }
+
+        .fa-icon {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .fa-instagram,
+        .fa-twitter,
+        .fa-facebook,
+        .fa-github {
+            padding: 8px;
+        }
+
+        .fa-heart,
+        .fa-comments,
+        .fa-share {
+            border-right: 2px solid gray;
+            padding: 8px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="profile-card">
+        <div class="profile-picture">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqkU7Ib5ElpB9KtsksL62kdy6JhQ1xw-mIyw&s"
+                alt="Profile Picture">
+        </div>
+
+
+        <div class="profile-info">
+            <h2 class="name">H.M Coding</h2>
+            <p class="bio">YouTuber & Blogger</p>
+        </div>
+
+        <div class="icon">
+            <i class="fa fa-instagram" id="i1" style="font-size: 35px;" aria-hidden="true"></i>
+            <i class="fa fa-twitter" style="font-size: 35px;color: #345569;" aria-hidden="true"></i>
+            <i class="fa fa-whatsapp" style="font-size: 35px; color: #1d462c ;" aria-hidden="true"></i>
+        </div>
+
+        <div class="button">
+            <button class="follow-button"style="color:#000">Subscribe</button>
+            <button class="follow-button" style="color:#000">message</button>
+        </div>
+
+        <div class="fa-icon">
+            <i class="fa fa-heart">60.4k</i>
+            <i class="fa fa-comments">20k</i>
+            <i class="fa fa-share-square" aria-hidden="true">120k</i>
+        </div>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
+

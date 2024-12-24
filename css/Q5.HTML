@@ -1,0 +1,150 @@
+<!-- • Task: Build a responsive webpage that includes:
+• A navigation bar.
+• A content section with two columns.
+• A footer.
+Additional Requirements:
+• Use media queries to make the webpage responsive for mobile devices.
+• On smaller screens (below 768px), stack the columns vertically.
+• Adjust the font sizes and padding to improve readability on mobile -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css task 5</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            color: black;
+            text-transform: capitalize;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header ,footer{
+            background-color: rgb(209, 201, 192);
+        }
+
+        header nav {
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav_link ,footer{
+            padding: 2rem;
+        }
+
+        .nav_link li {
+            padding: 0 2.5rem;
+            font-size: 2rem;
+            display: inline-block;
+        }
+
+        main {
+            background-color: rgb(57, 56, 56);
+            padding: 2rem;
+        }
+
+        main .content {
+            background-color: antiquewhite;
+            display: flex;
+            margin: auto;
+        }
+
+        .content .column {
+            border: 2px solid black;
+            width: 48%;
+            text-align: center;
+            margin: 1rem;
+            line-height:2rem;
+            overflow: hidden;
+            transition: 0.5s ease;
+        }
+        .column:hover{
+            transform: scale(1.02);
+            box-shadow: 2px 2px 10px black;
+        }
+        .column button{
+            background-color: black;
+            width: 100%;
+            color: white;
+            padding: 1rem;
+        }
+        footer{
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+      @media (max-width:768px) {
+            header nav {
+                display: block;
+            }
+
+            .nav_link li {
+                font-size: 2rem;
+                display: block;
+                padding: 0;
+                border-bottom: 2px solid rgba(0, 0, 0, 0.271);
+                margin: 1rem;
+            }
+            main .content {
+            background-color: antiquewhite;
+            display: block;
+            margin: auto;
+            padding: 1rem;
+        }
+       
+        .content .column {
+            width: 90%;
+            margin: 2rem;
+            line-height:2rem;
+            overflow: hidden;
+        }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+        
+            <div class="nav_link">
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="content">
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-WLr7S_l712bAdKG0qYTBcTrG2I04jXH6Xg&s" alt="" width="50%">
+                    <h3>made of flexible kinds of material featuring soles made from rubber and an upper part made with leather or canvas </h3>
+                    <p>Some Description lorem10</p>
+                    <p>₹6,849.00 INR*</p>
+                    <button>add to cart</button>
+            </div>
+            <div class="column">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREpR1GPfpxWaSEeGRpotPY97rjSg6XODBeHQ&s" alt="" width="50%">
+                    <h3>made of flexible kinds of material featuring soles made from rubber and an upper part made with leather or canvas </h3>
+                    <p>Some Description</p>
+                    <p>₹6,849.00 INR*</p>
+                    <button>add to cart</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; &trade; 2024-25 &nbsp; H&M@EXAMPLE.COM
+    </footer>
+</body>
+
+</html>

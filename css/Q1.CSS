@@ -1,0 +1,61 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+body
+{
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMofGVRDoifI7f6fdgC9b5TRYbjCAaxb6KcD1JQ5pRPoMxboipx8pUxO4&s");
+    background-size: cover;
+    color: #000;
+}
+.contact-form
+{
+    position: absolute;
+     top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+ .contact-form h1
+{
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline ;
+    /* margin: 40px 0; */
+}
+.contact-form p
+{
+    font-size: 30px;
+    font-family: bold;
+}
+.contact-form input
+{
+    font-size: 15px;
+    padding: 15px 8px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+}
+.contact-form button
+{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.contact-form button:hover
+{
+    background-color: rgba(30, 26, 65, 0.596);
+    color: white;
+}
+form input:hover
+{
+    background-color: #000c66;
+    color: white;
+}  
